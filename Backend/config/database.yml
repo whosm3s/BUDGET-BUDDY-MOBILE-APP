@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: 123123
+  host: 127.0.0.1
+  pool: 5
+
+development:
+  <<: *default
+  database: budget_buddy_development
+
+test:
+  <<: *default
+  database: budget_buddy_test
+
+production:
+  <<: *default
+  database: budget_buddy
